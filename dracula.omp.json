@@ -1,12 +1,25 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+        "background": "#282A36",
+        "current_line": "#44475A",
+        "foreground": "#F8F8F2",
+        "comment": "#6272A4",
+        "cyan":  "#8BE9FD",
+        "green": "#50FA7B",
+        "orange": "#FFB86C",
+        "pink": "#FF79C6",
+        "purple": "#BD93F9",
+        "red": "#FF5555",
+        "yellow": "#F1FA8C"
+  },
   "blocks": [
     {
       "alignment": "left",
       "segments": [
         {
-          "background": "#6272a4",
-          "foreground": "#ffffff",
+          "background": "p:comment",
+          "foreground": "p:foreground",
           "leading_diamond": "\ue0b6",
           "properties": {
             "template": "{{ .UserName }} "
@@ -15,8 +28,8 @@
           "type": "session"
         },
         {
-          "background": "#bd93f9",
-          "foreground": "#ffffff",
+          "background": "p:purple",
+          "foreground": "p:foreground",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "style": "folder",
@@ -26,8 +39,8 @@
           "type": "path"
         },
         {
-          "background": "#ffb86c",
-          "foreground": "#ffffff",
+          "background": "p:orange",
+          "foreground": "p:foreground",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "branch_icon": "",
@@ -40,8 +53,8 @@
           "type": "git"
         },
         {
-          "background": "#8be9fd",
-          "foreground": "#ffffff",
+          "background": "p:cyan",
+          "foreground": "p:foreground",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
@@ -50,8 +63,8 @@
           "type": "node"
         },
         {
-          "background": "#ff79c6",
-          "foreground": "#ffffff",
+          "background": "p:pink",
+          "foreground": "p:foreground",
           "properties": {
             "template": " \u2665 {{ .CurrentDate | date .Format }} ",
             "time_format": "15:04"
